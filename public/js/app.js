@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', async event => {
   messageOne.textContent = 'Getting weather for ' + searchQuery + '...';
   messageTwo.textContent = '';
 
-  const request = await fetch('weather?address=' + searchQuery);
+  const request = await fetch('/weather?address=' + searchQuery);
   const data = await request.json();
 
   if (data.error) messageOne.textContent = data.error;
